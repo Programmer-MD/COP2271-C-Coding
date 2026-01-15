@@ -7,9 +7,12 @@ test
 
 int main()
 {
-printf("hello");
+    const int highest = 10;
 
-return 0;
+   
+    printf("Hello, World!\n");
+    printf("%d",highest);
+    return 0;
 
 }
 
