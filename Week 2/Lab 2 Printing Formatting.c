@@ -1,10 +1,11 @@
 #include<stdio.h>
+#include<math.h>
 
 int main(){
     char rating;
     int student_id;
     int age;
-    float grade_ave;
+    float avg;
     int grade_1;
     int grade_2;
     int grade_3;
@@ -23,17 +24,19 @@ int main(){
     printf("Please enter your 3nd grade:");
     scanf(" %d", &grade_3);
 
-
-
     sum = grade_1 + grade_2 + grade_3;
-    grade_ave = (float) sum/3;
-
+    avg = (float) sum/3;
 
     printf("\n********Student Summary*******\n\n"); 
     printf("Student Rating: %c\n", rating);
-    printf("Student ID: %d\n", student_id);
-    printf("Age: %d\n", age);       
-    printf("Average Grade %2f \n", grade_ave);
+    printf("Student ID    : %d\n", student_id);
+    printf("Age           : %d\n", age);       
+    printf("Average Grade : %.2f \n", avg);
+
+    printf("\nAge Formatting:\n");
+    printf("Normal    : %d\n", age);
+    printf("Width 5   : %5d\n", age);
+    printf("Zero-pad  : %05d\n", age);
 
     return 0;
 }
