@@ -19,16 +19,16 @@ int main()
         {  
             int deposit_AM;
 
-            printf("How much would you like to deposit: ");
+            printf("How much would you like to deposit: $");
             scanf("%d", &deposit_AM);
             if (deposit_AM > 0)
             {
                 balance += deposit_AM;
-                printf("You have deposited %d\nCheck balance for total amount\n\n", deposit_AM);
+                printf("You have deposited $%d\nCheck balance for total amount\n\n", deposit_AM);
             }
             else
             {
-                printf("Error No negatives or characters!");
+                printf("Error No negatives or characters!\n");
             }
 
         }
@@ -43,12 +43,12 @@ int main()
             {
                 int withdraw_AM;
 
-                printf("Enter withdraw amount: ");
+                printf("Enter withdraw amount: $");
                 scanf("%d", &withdraw_AM);
                 if (withdraw_AM > 0)
                 {
                     balance -= withdraw_AM;
-                    printf("You have withdrawn %d\nCheck balance for total amount\n\n", withdraw_AM);
+                    printf("You have withdrawn $%d\nCheck balance for total amount\n\n", withdraw_AM);
                 }
                 else
                 {
