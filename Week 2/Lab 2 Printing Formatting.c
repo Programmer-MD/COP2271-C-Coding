@@ -34,7 +34,7 @@ int main(){
     printf("Average Grade : %.2f \n", avg);
 
     printf("\nAge Formatting:\n");
-    printf("Normal    : %d\n", age);
+    printf("Normal    : %.6d\n", age);
     printf("Width 5   : %5d\n", age);
     printf("Zero-pad  : %05d\n", age);
 

@@ -1,7 +1,11 @@
 #include <stdio.h>
 
 //Forgot bool studio include for actual bool True and False
+/* 
 
+comment
+
+*/
 int main()
 {
     int balance = 0;
