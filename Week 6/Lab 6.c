@@ -78,7 +78,8 @@ int main()
             int i = 1;
             int table_value = 1;
 
-            printf("X%5n\n%d|\n%d|\n%d|\n%d|\n%d|\n%d|\n%d|\n%d|\n%d|\n%d|\n", i, i*2, i*3, i*4, i*5, i*6, i*7, i*8, i*9, i*10);
+            //looping can make this simple
+            printf("X    n\n%d|\n%d|\n%d|\n%d|\n%d|\n%d|\n%d|\n%d|\n%d|\n%d|\n", i, i*2, i*3, i*4, i*5, i*6, i*7, i*8, i*9, i*10);
 
 
 
