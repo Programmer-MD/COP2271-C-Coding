@@ -1,21 +1,16 @@
 #include <stdio.h>
 
-//Forgot bool studio include for actual bool True and False
-/* 
 
-comment
-
-*/
 int main()
 {
-    int i = 1;
-    
     int loop = 1;
 
     while (loop)
     {
-        //Dynamic Menu Options w/ Loop
-    
+        // Dynamic Menu Options w/ Loop
+        // Things get messy quick so refer to other comments
+        // Choices 1-3 all have procautions for entering a negative number
+        // Choices 1 and 2 are done with while loops while 3 took a lot longer cause my lack of experience with for loops
         int choice;
         printf("Please select a service\n\n");
         printf("1. Sum from 1 to n\n2. Product from 1 to n\n3. Multiplication table\n4. Exit\n");
@@ -75,31 +70,49 @@ int main()
         else if (choice == 3)
         {
             int n;
-            int i = 1;
-            int table_value = 1;
 
-            //looping can make this simple
-            printf("X    n\n%d|\n%d|\n%d|\n%d|\n%d|\n%d|\n%d|\n%d|\n%d|\n%d|\n", i, i*2, i*3, i*4, i*5, i*6, i*7, i*8, i*9, i*10);
-
-
-
-            printf("Enter a postive integer to expand the multiplcation table: ");
+            printf("Enter a positive integer to expand the multiplication table: ");
             scanf("%d", &n);
-
-
-
-
-
+            // could be done easier with better print statements?
+            // While loops version possible but could not solve it
+            if (n > 0)
+            {
+                // rows
+                for (int i = 1; i <= n; i++) 
+                {
+                    // columns
+                    for (int j = 1; j <= 10; j++)
+                    {
+                        printf("%d x %d = %d\t", i, j, i * j);
+                    }
+                    printf("\n"); // move to next row
+                }
+            }
+            else
+            {
+            printf("Invalid Input\n");
+            }
 
         }
-        //Exit and Finish Usage
+      
+        // Exit and Finish Usage
         else if (choice == 4)
         {
-            printf("Have a Nice Day! :)");
-            int false = loop - 1;
-            return 0;
+            int exit;
+            printf("\nPress 1 to confirm or 0 to go back: ");
+            scanf("%d", &exit);
+            if (exit ==1 )
+            {
+                printf("\nHave a nice day");
+                return 0;
+            }
+            else
+            {
+                printf("\nReturning to menu\n");
+            }
+
         }
-        //Error Handling guiding user back to loop
+        // Error Handling guiding user back to loop
         else
         {
             printf("Invalid Option\n\n");
