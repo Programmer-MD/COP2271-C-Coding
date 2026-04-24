@@ -49,10 +49,5 @@ int main()
     printf("Number of digits: %d\n", nd);
 
 
-
-
-
     return 0;
-
-
 }
