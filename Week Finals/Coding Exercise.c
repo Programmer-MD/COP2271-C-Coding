@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /*
-1. Student Grade Calculator
+// 1. Student Grade Calculator
 
 int main()
 {
@@ -39,7 +39,7 @@ int main()
     return 0;
 }
 
-2. Coding Exercises
+// 2. Coding Exercises
 
 void swap_by_value(int a, int b)
 {
@@ -85,7 +85,7 @@ int main()
     return 0;
 }
 
-3. Number Classification
+// 3. Number Classification
 
 int main()
 {
@@ -111,11 +111,162 @@ int main()
     return 0;
 }
 
+
+// 4. Menu-Driven Calculator
+// Could be optimized, but does the job
+void add()
+{
+    int a, b;
+    printf("Please enter your first number:\n");
+    scanf("%d", &a);
+    printf("Please enter your second number:\n");
+    scanf("%d", &b);
+    printf("The sum is %d\n",a + b);
+
+}
+void subtract()
+{
+    int a, b;
+    printf("Please enter your first number:\n");
+    scanf("%d", &a);
+    printf("Please enter your second number:\n");
+    scanf("%d", &b);
+    printf("The difference is %d\n",a - b);
+}
+void multiply()
+{
+    int a, b;
+    printf("Please enter your first number:\n");
+    scanf("%d", &a);
+    printf("Please enter your second number:\n");
+    scanf("%d", &b);
+    printf("The product is %d\n",a * b);
+}
+void divide()
+{
+    int a, b;
+    int x = 1;
+    printf("This in specifically integer division\n");
+    while(x == 1)
+    {
+        
+        printf("Please enter your first number:\n");
+        scanf("%d", &a);
+        if (a == 0)
+            printf("Dividing by 0 can cause errors, Pick a different number:\n");
+        else
+            x = 2;
+    }
+    printf("Please enter your second number:\n");
+    scanf("%d", &b);
+    printf("The quotient is %d\n",a / b);
+}
+
+int main()
+{
+    while(1)
+    {
+        int ch;
+       
+        printf("----Calculator----\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Exit\n");
+        scanf("%d", &ch);
+        if (ch == 1)
+            add();
+        else if (ch == 2)
+            subtract();
+        else if (ch == 3)
+            multiply();
+        else if (ch == 4)
+            divide();
+        else if (ch == 5)
+        {
+            printf("have a good day\n");
+            break;
+        }
+        else
+            printf("Please enter a valid choice\n");
+
+    }
+    return 0;
+}
+
 */
 
+// 5. Array statistics
+
+
+void main()
+{
+    int a[10] = {1,2,3,4,5,6,7,8,9,10};
+    int ch;
+    
+    do{
+        
+        printf("Enter 1 to print all elements\nEnter 2 to sum\nEnter 3 to average\nEnter 4 to find the min\nEnter 5 to find the max\nEnter 6 for quit\n");
+        scanf("%d",&ch);
+        
+        if (ch == 1)
+        {
+            for(int i = 0; i < 10; i++)
+            {
+                printf("%d ", a[i]);
+            }
+        }
+        else if (ch == 2)
+        {
+            int sum = 0;
+            for(int i = 0; i < 10; i++)
+            {
+                sum += a[i];
+            }
+            printf("The sum is %d\n", sum);
+        }
+        else if (ch == 3)
+        {
+            int sum = 0;
+            for(int i = 0; i < 10; i++)
+            {
+                sum += a[i];
+            }
+            printf("The average is %d\n", sum / 10);
+        }
+        else if (ch == 4)
+        {
+            int min = a[0];
+            for(int i = 1; i < 10; i++)
+            {
+                if (a[i] < min)
+                    min = a[i];
+            }
+            printf("The minimum is %d\n", min);
+        }
+        else if (ch == 5)
+        {
+            int max = a[0];
+            for(int i = 1; i < 10; i++)
+            {
+                if (a[i] > max)
+                    max = a[i];
+            }
+            printf("The maximum is %d\n", max);
+        }
+        else if (ch == 6)
+        {
+            printf("Goodbye\n");
+        }
+        else
+        {
+            printf("Please enter a valid choice\n");
+        }
+    } while (ch != 6);
+    return 0;
+}
 
 
 
+
+
+   
 
 
 
