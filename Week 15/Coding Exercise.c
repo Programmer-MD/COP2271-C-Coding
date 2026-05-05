@@ -39,7 +39,7 @@ int main()
     return 0;
 }
 
-// 2. Coding Exercises
+// 2. Swap Demonstration
 
 void swap_by_value(int a, int b)
 {
@@ -113,7 +113,7 @@ int main()
 
 
 // 4. Menu-Driven Calculator
-// Could be optimized, but does the job
+
 void add()
 {
     int a, b;
@@ -190,10 +190,7 @@ int main()
     return 0;
 }
 
-*/
-
 // 5. Array statistics
-
 
 void main()
 {
@@ -262,20 +259,156 @@ void main()
     return 0;
 }
 
+// 6. Random Number Analysis
+
+int main()
+{
+    srand(time(NULL));
+    //put in for loop
+    int ctr_50 = 0;
+    int ctr_even = 0;
+    int ctr_odd = 0;
+
+    for (int i = 0; i < 20; i++)
+    {
+        int randnum = (rand() % 100) + 1;
+        printf("Random number %d: %d\n", i + 1, randnum);
+        if (randnum > 50)
+            ctr_50++;
+        int even_check =  randnum % 2;
+        if (even_check ==  0)
+            ctr_even++;
+        else
+            ctr_odd++;
+
+    }
+    printf("Amount of numbers over 50: %d\n", ctr_50);
+    printf("Amount of numbers that are even: %d\n", ctr_odd);
+    printf("Amount of numbers that are odd: %d\n", ctr_even);
+}
 
 
+// 7. Fibonacci Series
+void fib_iterative(int n)
+{
+    int a = 0, b = 1, next;
+    for(int i = 0; i < n; i++)
+    {
+        next = a + b;
+        a = b;
+        b = next;
+    }
+    printf("Iterative result: %d\n", a);
 
+}
 
+int fib_recursive(int n)
+{
+    if (n == 0)
+        return 0;
+    else if (n == 1)
+        return 1;
+    else
+        return fib_recursive(n - 1) + fib_recursive(n - 2);
+}
+
+int main()
+{
+    int n;
+    printf("Please a number to find the nth term in the Fibonacci series:  ");
+    scanf("%d", &n);
+
+    fib_iterative(n);
+
+    printf("\nRecursive result: %d\n", fib_recursive(n));
+    return 0;
+}
+
+// 8. Prime Number Checker
+
+int is_prime(int n)
+{
+    if (n <= 1)
+        return 0;
    
+    for(int i = 2; i < n; i++)
+    {
+        
+        if (n % i == 0)
+            return 0;
+    }
+    return 1;
+}
+int main()
+{
+    int n;
+    printf("Please enter a number: ");
+    scanf("%d", &n);
+    is_prime(n);
+
+    if (is_prime(n))
+        printf("Prime number\n");
+    else
+        printf("Not a prime number\n");
+
+    return 0;
+}
 
 
+// 9. Multiplication Table
 
+int main()
+{
+    int n = 0;
+    printf("Enter a positive integer to see it multiplied 1-10: ");
+    scanf("%d", &n);
 
+    for(int i = 1; i <11 ; i++)
+    {
+        printf("%d * %d = %d\n", n, i, n * i);
+    }
 
+    return 0;
+}
 
+*/
 
+// 10. 3x3 Matrix Operations
 
+int main()
+{
+    int sum = 0;
+    int sum_d1 = 0;
+    int sum_d2 = 0;
+    int matrix[3][3] = {
+    {1, 2, 3},
+    {4, 5, 6},
+    {7, 8, 9}
+};
 
+    for (int i = 0; i < 3; i++)
+    {
+        for(int j = 0; j < 3; j++)
+        {
+            sum += matrix[i][j];  
+        }
+    }
+    printf("The sum of the matrix is: %d\n", sum);
+    for (int i = 0; i < 3; i++)
+    {
+        sum_d1 += matrix[i][i];
+        
+    }
+    printf("The sum of the first diagonal is: %d\n", sum_d1);
+
+    for (int i = 0; i < 3; i++)
+    {
+        sum_d2 += matrix[i][2 - i];  
+        
+    }
+    printf("The sum of the second diagonal is: %d\n", sum_d2);
+    return 0;
+}
 
 
 

@@ -9,7 +9,7 @@ int main()
 {
     srand(time(NULL));
 
-    int randNum = (rand() % 6) + 1; 
+    int randNum = (rand() % 100) + 1; 
 
     guessNumber(randNum);
 
